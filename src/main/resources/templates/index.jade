@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 Neural Playground
+		
+	form( action='/login', method='POST' )
+		input(type="hidden", name='client_name', value='Basic' )		
+		input(name='uid', placeholder='Username' )		
+		input(name='pwd', placeholder='Password' )
+		input(type='submit', value='Login')
+	
+	p Please login

@@ -25,7 +25,7 @@ public class ReadAudio {
 	
 		targetFormat = new AudioFormat(
 				AudioFormat.Encoding.PCM_SIGNED,  // basic raw waveform 
-				2_000,  // sample rate
+				1_000,  // sample rate
 				8, // 8 bits
 				1, // channels 
 				1, // 8 bit mono = frame size = 1 byte 

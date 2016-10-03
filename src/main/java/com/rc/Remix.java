@@ -23,8 +23,8 @@ public class Remix {
 
 	private Random rng = new Random( 50 ) ;
 
-	public static int BATCH_SIZE = 10;
-	public static int HISTORY_LENGTH = 1000;
+	public static int BATCH_SIZE = 64;
+	public static int HISTORY_LENGTH = 2048;
 	public static int NUM_TUNES = mp3s.length ;
 
 	private LSTM nn ;
@@ -148,7 +148,7 @@ public class Remix {
 			Remix self = new Remix() ;
 //			if( 1==1) return ;
 			Nd4j.ENFORCE_NUMERICAL_STABILITY = true ;
-			for( int i=0 ; i<2000 ; i++ ) {
+			for( int i=0 ; i<5_000 ; i++ ) {
 				self.train() ;
 				if( (i % 10 ) == 9 ) {
 					self.predict( 50_000 );
